@@ -65,7 +65,7 @@ gatsbyProcess.on("message", (msg: IPCMessage) => {
         action.payload.level === `ACTIVITY_FAILED` ||
         action.payload.level === `ACTIVITY_INTERRUPTED`
       ) {
-        // this will contain extra "duration" and "textStatus" fields that are specific to log entry
+        // this will contain extra "duration" and "statusText" fields that are specific to log entry
         // representing finished/failed/interrupted activity
         // see "ActivityLogObject" type in "./types.ts"
       } else if (action.payload.level === `ERROR`) {

@@ -25,7 +25,7 @@ type ActivityLogObject = BaseLogObject & {
    * Any additional text meant to be displayed along main "text"
    * Can contain content like "10/10 1.23/s" (as meaningful result of running activity)
    */
-  textStatus?: string;
+  statusText?: string;
   /**
    * Time from start to finish of activity in seconds
    */
