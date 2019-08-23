@@ -47,7 +47,7 @@ type ErrorLogObject = BaseLogObject & {
   /**
    * Error code. Not all errors will have codes, as not all of them have been converted yet.
    */
-  id?: string;
+  code?: string;
   /**
    * General classification of error. At time of writing it, this can be
    * one of `GRAPHQL`, `CONFIG`, `WEBPACK`, `PLUGIN`.
