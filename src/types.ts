@@ -30,6 +30,11 @@ type ActivityLogObject = BaseLogObject & {
    * Time from start to finish of activity in seconds
    */
   duration: number;
+
+  activity_uuid: string;
+  activity_type: string;
+  activity_current?: number;
+  activity_total?: number;
 };
 
 interface Position {
@@ -96,6 +101,11 @@ interface ActivityObject {
    * Identifier of action. It might be set to same thing as "text" if "id" wasn't explicitely provided.
    */
   id: string;
+
+  /**
+   * Unique identifier of activity.
+   */
+  uuid: string;
   /**
    * One of "progress", "spinner", "pending".
    * "pending" type activities are not meant to be displayed in UI, they are there
