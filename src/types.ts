@@ -94,7 +94,7 @@ type ActivityStatus =
 
 type GlobalStatus = `IN_PROGRESS` | "FAILED" | "SUCCESS";
 
-type ActivityType = "progress" | "spinner" | "pending";
+type ActivityType = "progress" | "spinner" | "pending" | "hidden";
 
 interface ActivityObject {
   /**
@@ -236,6 +236,10 @@ interface IPCMessageVersion {
 interface IPCMessageLog {
   type: `LOG_ACTION`;
   action: Action;
+  /**
+   * Date string using `YYYY-MM-DDTHH:mm:ss.sssZ` format
+   */
+  timestamp: string;
 }
 
 export type IPCMessage = IPCMessageVersion | IPCMessageLog;
