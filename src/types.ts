@@ -77,10 +77,17 @@ type ErrorLogObject = BaseLogObject & {
    */
   context: Record<string, any>;
 
-  // there are 2 fields that I won't type as we don't handle those
-  // very well and consistent in gatsby core yet
-  // stack
-  // error
+  /**
+   * Optional stack field (not all errors will have it)
+   */
+  stack?: CallSite[];
+};
+
+type CallSite = {
+  fileName: string;
+  functionName?: string;
+  lineNumber?: number;
+  columnNumber?: number;
 };
 
 type LogObject = ErrorLogObject | ActivityLogObject | GenericLogObject;
